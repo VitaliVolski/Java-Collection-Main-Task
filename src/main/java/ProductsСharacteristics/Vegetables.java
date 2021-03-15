@@ -1,16 +1,28 @@
-package RestarauntVegetables;
+package ProductsСharacteristics;
+
+import RestaurantProducts.VegetablesTypes;
 
 public class Vegetables {
 
+        private VegetablesTypes vegetablesTypes;
         private String vegetableName;
         private double priceKilo;
         private double caloriePer100g;
 
-        public Vegetables(String vegetableName, double priceKilo,
-                          double caloriePer100g) {
+        public Vegetables(VegetablesTypes vegetablesTypes,String vegetableName,
+                          double priceKilo, double caloriePer100g) {
+                this.vegetablesTypes=vegetablesTypes;
                 this.vegetableName = vegetableName;
                 this.priceKilo = priceKilo;
                 this.caloriePer100g = caloriePer100g;
+        }
+
+        public VegetablesTypes getVegetablesTypes() {
+                return vegetablesTypes;
+        }
+
+        public void setVegetablesTypes(VegetablesTypes vegetablesTypes) {
+                this.vegetablesTypes = vegetablesTypes;
         }
 
         public String getVegetableName() {
@@ -39,9 +51,17 @@ public class Vegetables {
 
         @Override
         public String toString() {
-                return "Vegetables:(" + "name='" + vegetableName + '\''
+                return "Vegetables(" + "vegetablesTypes=" + vegetablesTypes
+                        + ", name='" + vegetableName + '\''
                         + ", priceKilo=" + priceKilo
                         + ", calorie=" + caloriePer100g + ')';
         }
+
+        //        @Override
+//        public String toString() {
+//                return "Vegetables:(" + "name='" + vegetableName + '\''
+//                        + ", priceKilo=" + priceKilo
+//                        + ", calorie=" + caloriePer100g + ')';
+//        }
 }
 

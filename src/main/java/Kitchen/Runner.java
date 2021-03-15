@@ -12,12 +12,13 @@
 
 package Kitchen;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Runner {
 
     public static void main(String[] args) {
+
+        Chef chef = new Chef();
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Hello, welcome to chef cooker kitchen,\n "
@@ -28,8 +29,12 @@ public class Runner {
         if (negativeAnswer.equals("no")) {
             System.out.println("We wish, you don't wont to test it.");
             System.exit(0);
+        } else {
+            chef.createDietSalad();
+            chef.countSaladCalories();
+            chef.sortSaladByWeightSaladIngredientsInDishes();
+            chef.sortSaladIngredient();
         }
-
-        Chef.makeSaladCountCaloriesAndSortIngredient();
     }
 }
+

@@ -1,6 +1,8 @@
 package Kitchen;
 
-import RestarauntVegetables.Vegetables;
+import ProductsСharacteristics.Vegetables;
+
+import java.util.List;
 
 public class Salad {
 
@@ -43,9 +45,10 @@ public class Salad {
     @Override
     public String toString() {
         return "Salad(" + "saladName:'" + saladName + '\''
-                +  "Vegetables(" + "name='" + vegetables.getVegetableName() + '\''
-                +  ", priceKilo=" + vegetables.getPriceKilo()
-                +  ", calorie=" + vegetables.getCaloriePer100g()
-                +  "), weightIngredientInDishesInGrams:" + weightIngredientInDishesInGrams + ')';
+                + "Vegetables(" + "name='" + vegetables.getVegetableName() + '\''
+                + ", priceKilo=" + vegetables.getPriceKilo()
+                + ", calorie=" + vegetables.getCaloriePer100g()
+                + "), weightIngredientInDishesInGrams:" + weightIngredientInDishesInGrams + ')';
+
     }
 }
