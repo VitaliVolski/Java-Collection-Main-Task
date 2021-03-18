@@ -1,6 +1,6 @@
-package RestaurantProducts;
+package restaurantProducts;
 
-import ProductsСharacteristics.Vegetables;
+import productsСharacteristics.Vegetables;
 
 public class Kohlrabi extends Vegetables {
 

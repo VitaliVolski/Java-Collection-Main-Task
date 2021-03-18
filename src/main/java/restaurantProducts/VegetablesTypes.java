@@ -1,4 +1,4 @@
-package RestaurantProducts;
+package restaurantProducts;
 
 public enum VegetablesTypes {
 

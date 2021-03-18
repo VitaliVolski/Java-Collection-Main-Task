@@ -10,7 +10,7 @@
 //  Провести сортировку овощей для салата на основе одного из параметров.
 //  Найти овощи в салате, соответствующие заданному диапазону калорийности.
 
-package Kitchen;
+package kitchen;
 
 import java.util.Scanner;
 
@@ -19,22 +19,22 @@ public class Runner {
     public static void main(String[] args) {
 
         Chef chef = new Chef();
+        Salad salad = new Salad();
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Hello, welcome to chef cooker kitchen,\n "
-                + "Do you want to test our DietSalad ?\n"
+                + "Do you want to test our DietSalad.java ?\n"
                 + "Please, write 'yes' - to test or 'no' - to finish, and press 'Enter'");
-        String negativeAnswer = scanner.nextLine();
+        String answer = scanner.nextLine();
 
-        if (negativeAnswer.equals("no")) {
+        if (answer.equals("no")) {
             System.out.println("We wish, you don't wont to test it.");
             System.exit(0);
         } else {
             chef.createDietSalad();
-            chef.countSaladCalories();
-            chef.sortSaladByWeightSaladIngredientsInDishes();
-            chef.sortSaladIngredient();
+            salad.countSaladCalories(chef.saladIngredients);
+            salad.sortSaladByWeightSaladIngredientsInDishes(chef.saladIngredients);
+            salad.sortSaladIngredient(chef.saladIngredients);
         }
     }
 }
-

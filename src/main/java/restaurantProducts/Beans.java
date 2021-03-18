@@ -1,6 +1,8 @@
-package RestaurantProducts;
+package restaurantProducts;
 
-import ProductsСharacteristics.Vegetables;
+import productsСharacteristics.Vegetables;
+
+import java.util.ArrayList;
 
 public class Beans extends Vegetables {
 
