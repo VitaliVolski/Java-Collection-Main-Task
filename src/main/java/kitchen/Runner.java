@@ -32,9 +32,11 @@ public class Runner {
             System.exit(0);
         } else {
             chef.createDietSalad();
-            salad.countSaladCalories(chef.saladIngredients);
-            salad.sortSaladByWeightSaladIngredientsInDishes(chef.saladIngredients);
-            salad.sortSaladIngredient(chef.saladIngredients);
+
+
+//            salad.countSaladCalories(chef.saladIngredients);
+//            salad.sortSaladByWeightSaladIngredientsInDishes(chef.saladIngredients);
+//            salad.sortSaladIngredient(chef.saladIngredients);
         }
     }
 }
