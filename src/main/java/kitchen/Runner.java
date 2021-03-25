@@ -20,6 +20,7 @@ public class Runner {
 
         Chef chef = new Chef();
         Salad salad = new Salad();
+        DietSalad dietSalad = new DietSalad();
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Hello, welcome to chef cooker kitchen,\n "
@@ -31,12 +32,14 @@ public class Runner {
             System.out.println("We wish, you don't wont to test it.");
             System.exit(0);
         } else {
-            chef.createDietSalad();
-
-
-//            salad.countSaladCalories(chef.saladIngredients);
-//            salad.sortSaladByWeightSaladIngredientsInDishes(chef.saladIngredients);
-//            salad.sortSaladIngredient(chef.saladIngredients);
+            System.out.println("\nCreate salad from the existing ingredients: "
+                    + chef.createDietSalad(dietSalad.collectDietSaladIngredients()));
+            salad.countSaladCalories(chef.createDietSalad
+                    (dietSalad.collectDietSaladIngredients()));
+            salad.sortSaladByWeightSaladIngredientsInDishes
+                    (chef.createDietSalad(dietSalad.collectDietSaladIngredients()));
+            salad.sortSaladIngredient
+                    (chef.createDietSalad(dietSalad.collectDietSaladIngredients()));
         }
     }
 }

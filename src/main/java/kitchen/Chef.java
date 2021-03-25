@@ -1,17 +1,14 @@
 package kitchen;
 
-public class Chef extends DietSalad {
+import productsСharacteristics.Vegetables;
+import java.util.ArrayList;
 
-    Salad salad = new Salad();
-    DietSalad dietSalad = new DietSalad();
+public class Chef {
 
-    public Chef createDietSalad () {
+    public Salad createDietSalad(ArrayList<Vegetables> dietSaladIngredients) {
 
-        salad.saladName = "DietSalad";
+        Salad dishDietSalad = new Salad("Diet-Salad", dietSaladIngredients);
 
-        System.out.println ("\nCreate salad from the existing ingredients. "
-            + "It's named:" + salad.getSaladName() + ", and consist of:"
-                + ..............? );
-        return this;
+        return dishDietSalad;
     }
 }
