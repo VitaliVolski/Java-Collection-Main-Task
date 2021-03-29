@@ -35,10 +35,10 @@ public class Salad {
         this.saladIngredients = saladIngredients;
     }
 
-    public double countSaladCalories (Salad salad) {
+    public double countSaladCalories () {
 
         double caloriesCount = 0.0;
-        for (Vegetables vegetables : salad.saladIngredients) {
+        for (Vegetables vegetables : saladIngredients) {
             caloriesCount += vegetables.getWeightIngredientInDishesInGrams()
                     * vegetables.getCaloriePer100g() / 100;
         }
@@ -46,22 +46,22 @@ public class Salad {
         return caloriesCount;
     }
 
-    public Salad sortSaladByWeightSaladIngredientsInDishes(Salad salad) {
+    public Salad sortSaladByWeightSaladIngredientsInDishes() {
 
-        salad.saladIngredients.sort(Comparator.comparing
+        saladIngredients.sort(Comparator.comparing
                 (Vegetables :: getWeightIngredientInDishesInGrams));
         System.out.println("\nSort saladIngredients by their weight in dishes:");
-        for (Vegetables vegetables : salad.saladIngredients) {
+        for (Vegetables vegetables : saladIngredients) {
             System.out.println(vegetables.getVegetableName() + " - "
                     + vegetables.getWeightIngredientInDishesInGrams() + " gm.");
         }
         return this;
     }
 
-    public Salad sortSaladIngredient(Salad salad) {
+    public Salad sortSaladIngredient() {
 
         System.out.println("\nFind vegetables in setting calories range (20.0 ; 35.0):");
-        for (Vegetables vegetables : salad.saladIngredients) {
+        for (Vegetables vegetables : saladIngredients) {
             if (vegetables.getCaloriePer100g() >= 20.0
                     && vegetables.getCaloriePer100g() <= 35.0) {
                 System.out.println(vegetables.getVegetableName() + " - "

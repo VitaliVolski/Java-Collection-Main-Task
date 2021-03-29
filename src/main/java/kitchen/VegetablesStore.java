@@ -5,9 +5,9 @@ import restaurantProducts.*;
 
 import java.util.ArrayList;
 
-public class DietSalad {
+public class VegetablesStore {
 
-    public DietSalad() {
+    public VegetablesStore() {
     }
 
     public ArrayList<Vegetables> collectDietSaladIngredients() {
